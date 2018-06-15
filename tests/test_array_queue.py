@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from ..queue.array_queue import ArrayQueue
+from ..queue import ArrayQueue
 
 
 def test_array_queue():

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..queue.dll_quque import Deque
+from ..queue import Deque
 
 
 def test_dll_queue():

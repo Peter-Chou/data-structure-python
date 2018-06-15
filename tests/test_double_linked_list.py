@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..linkedlist.double_linked_list import CircularDoubleLinkedList
+from ..linkedlist import CircularDoubleLinkedList
 
 
 def test_double_link_list():

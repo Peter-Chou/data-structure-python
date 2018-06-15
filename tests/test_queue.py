@@ -1,5 +1,5 @@
 import pytest
-from ..queue.queue import Queue
+from ..queue import Queue
 
 
 def test_queue():

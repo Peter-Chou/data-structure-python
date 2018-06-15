@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..array.fixed_array import FixedArray
+from ..array import FixedArray
 
 
 class FullError(Exception):

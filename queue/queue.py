@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..linkedlist.single_linked_list import LinkedList
+from ..linkedlist import LinkedList
 
 
 class EmptyError(Exception):

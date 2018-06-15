@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..array.bag_adt import Bag
+from ..array import Bag
 
 
 def test_bag():
