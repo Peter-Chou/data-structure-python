@@ -31,6 +31,7 @@ def test_linked_list():
 
     ll.clear()
     assert len(ll) == 0
+    assert 0
 
 
 def test_linked_list_remove():
