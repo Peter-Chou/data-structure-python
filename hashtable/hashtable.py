@@ -4,7 +4,12 @@ from ..array import FixedArray
 
 
 class Slot(object):
-    """定义了hashtable的槽"""
+    """定义了hashtable的槽
+    注意，一个槽有三种状态，看你能否想明白。相比链接法解决冲突，二次探查法删除一个 key 的操作稍微复杂。
+    1.从未使用 HashMap.UNUSED。此槽没有被使用和冲突过，查找时只要找到 UNUSED 就不用再继续探查了
+    2.使用过但是 remove 了，此时是 HashMap.EMPTY，该探查点后边的元素扔可能是有key
+    3.槽正在使用 Slot 节点
+    """
 
     def __init__(self, key, value):
         self.key, self.value = key, value
@@ -13,10 +18,10 @@ class Slot(object):
 class HashTable(object):
 
     UNUSED = None   # 没被使用过
-    EMPTY = Slot(None, None)
+    EMPTY = Slot(None, None)    # 用过但是被删除了
 
     def __init__(self):
-        self._table = FixedArray(8, init=HashTable.UNUSED)
+        self._table = FixedArray(8, init=HashTable.UNUSED)  # 保持2**i 次方
         self.length = 0
 
     @property
@@ -25,19 +30,19 @@ class HashTable(object):
         return self.length / float(len(self._table))
 
     def __len__(self):
-        return self.length
+        return self.length  # hashtable已经使用的数量
 
     def _hash(self, key):
         return abs(hash(key)) % len(self._table)
 
     def _find_key(self, key):
         index = self._hash(key)
-        _len = len(self._table)
+        _len = len(self._table)  # hashtable的capacity
         while self._table[index] is not HashTable.UNUSED:
             if self._table[index] is HashTable.EMPTY:   # 槽为空
                 index = (index * 5 + 1) % _len
                 continue
-            elif self._table[index] == key:  # 槽有值且为key
+            elif self._table[index].key == key:  # 槽有值且为key
                 return index
             else:               # 槽有值但不为key
                 index = (index * 5 + 1) % _len
