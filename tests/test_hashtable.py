@@ -10,7 +10,7 @@ def test_hashtable():
     assert len(h) == 3
     assert h.get('a') == 0
     assert h.get('b') == 1
-    assert h.get("hehe") == None
+    assert h.get("hehe") is None
 
     h.remove('a')
     assert h.get('a') is None
