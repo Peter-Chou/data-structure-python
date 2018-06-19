@@ -64,6 +64,12 @@ class HashTable(object):
         return index is not None
 
     def add(self, key, value):
+        """往哈希表里添加键值对
+
+        如果哈希表里已经有key了，则更新
+        如果哈希表里没有key，则插入
+        """
+
         if key in self:
             index = self._find_key(key)
             self._table[index] = value
@@ -88,6 +94,9 @@ class HashTable(object):
                 self.length += 1
 
     def get(self, key, default=None):
+        """根据键取回值
+        """
+
         index = self._find_key(key)
         if index is None:
             return default
