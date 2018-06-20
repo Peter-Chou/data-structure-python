@@ -8,10 +8,13 @@ class SetADT(HashTable):
     def add(self, key):
         return super(SetADT, self).add(key, True)
 
-    def __add__(self, other_set):
+    def remove(self, key):
+        return super(SetADT, self).remove(key)
+
+    def __and__(self, other_set):
         new_set = SetADT()
         for element_a in self:
-            if element_a in other_set():
+            if element_a in other_set:
                 new_set.add(element_a)
         return new_set
 

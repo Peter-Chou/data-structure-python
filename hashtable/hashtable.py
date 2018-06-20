@@ -72,7 +72,7 @@ class HashTable(object):
 
         if key in self:
             index = self._find_key(key)
-            self._table[index] = value
+            self._table[index].value = value
             return False
         else:
             index = self._find_slot_for_insert(key)
