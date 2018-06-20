@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..linkedlist import CircularDoubleLinkedList
+from datastruct.linkedlist import CircularDoubleLinkedList
 
 
 def test_double_link_list():

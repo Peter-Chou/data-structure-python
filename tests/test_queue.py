@@ -1,5 +1,5 @@
 import pytest
-from ..queue import Queue
+from datastruct.queue import Queue
 
 
 def test_queue():

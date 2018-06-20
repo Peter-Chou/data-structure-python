@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from ..queue import ArrayQueue
+from datastruct.queue import ArrayQueue
 
 
 def test_array_queue():

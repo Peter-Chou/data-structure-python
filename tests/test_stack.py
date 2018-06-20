@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from ..stack import Stack
+from datastruct.stack import Stack
 
 
 def test_stack():

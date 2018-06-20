@@ -1,4 +1,4 @@
-from ..linkedlist import LinkedList
+from datastruct.linkedlist import LinkedList
 
 
 def test_linked_list():
@@ -31,7 +31,6 @@ def test_linked_list():
 
     ll.clear()
     assert len(ll) == 0
-    assert 0
 
 
 def test_linked_list_remove():

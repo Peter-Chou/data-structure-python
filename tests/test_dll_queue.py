@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..queue import Deque
+from datastruct.queue import Deque
 
 
 def test_dll_queue():

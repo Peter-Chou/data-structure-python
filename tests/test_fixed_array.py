@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..array import FixedArray
+from datastruct.array import FixedArray
 
 
 def test_array():

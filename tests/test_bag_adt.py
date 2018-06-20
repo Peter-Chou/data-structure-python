@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ..array import Bag
+from datastruct.array import Bag
 
 
 def test_bag():

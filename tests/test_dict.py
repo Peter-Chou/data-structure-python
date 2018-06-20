@@ -1,4 +1,4 @@
-from ..dict import DictADT
+from datastruct.dict import DictADT
 
 
 def test_dict_adt():

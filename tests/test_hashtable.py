@@ -1,4 +1,4 @@
-from ..hashtable import HashTable
+from datastruct.hashtable import HashTable
 
 
 def test_hashtable():

@@ -1,4 +1,4 @@
-from ..set import SetADT
+from datastruct.set import SetADT
 
 
 def test_SetADT():
