@@ -21,7 +21,7 @@ def test_insert_sort():
     assert seq == sorted_seq
 
 
-def test__sort():
+def test_sort():
     seq = list(range(10))
     random.shuffle(seq)
     sorted_seq = sorted(seq)
