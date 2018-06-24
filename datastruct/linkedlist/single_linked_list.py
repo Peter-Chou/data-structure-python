@@ -78,7 +78,6 @@ class LinkedList(object):
             new_value
         """
         prevnode = self.root
-        curnode = self.root.next
         node = Node(new_value)
         for curnode in self.iter_node():
             if curnode.value == value:
