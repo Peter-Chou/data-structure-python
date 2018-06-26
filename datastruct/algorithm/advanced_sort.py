@@ -2,6 +2,7 @@
 
 
 def merge_sort(seq):
+    """归并排序"""
     if len(seq) <= 1:
         return seq
     else:
@@ -35,3 +36,36 @@ def merge_sorted_list(sorted_a, sorted_b):
         b += 1
 
     return new_sorted_seq
+
+
+def quick_sort(arr, beg, end):
+    """快速排序
+    """
+    if beg < end:
+        pivot = partition(arr, beg, end)
+        quick_sort(arr, beg, pivot)
+        quick_sort(arr, pivot+1, end)
+
+
+def partition(arr, beg, end):
+    """快速排序的partition
+    """
+    pivot_index = beg   # 主元选第一个
+    pivot = arr[pivot_index]
+    left = pivot_index + 1
+    right = end - 1     # 左闭右开  [0: end)
+
+    while True:
+        # left指针找比pivot大的
+        while left <= right and arr[left] < pivot:
+            left += 1
+        # right指针找比pivot小的
+        while right >= left and arr[right] >= pivot:
+            right -= 1
+
+        if left > right:
+            break
+        else:
+            arr[left], arr[right] = arr[right], arr[left]
+    arr[pivot_index], arr[right] = arr[right], arr[pivot_index]
+    return right    # 新的pivot位置
