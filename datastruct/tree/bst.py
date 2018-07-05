@@ -112,7 +112,6 @@ class BST(object):
                     subtree.right, successor_node.key)
                 return subtree
 
-    # TODO: complete bst test
     def remove(self, key):
         assert key in self
         self.size -= 1
