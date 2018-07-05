@@ -57,8 +57,8 @@ class BST(object):
             return None
         elif subtree.left is None:  # 找到左子树的头
             return subtree
-        else
-        return self._bst_min_node(subtree.left)
+        else:
+            return self._bst_min_node(subtree.left)
 
     def bst_min(self):
         node = self._bst_min_node(self.root)
@@ -112,6 +112,7 @@ class BST(object):
                     subtree.right, successor_node.key)
                 return subtree
 
+    # TODO: complete bst test
     def remove(self, key):
         assert key in self
         self.size -= 1
